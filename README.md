@@ -1,4 +1,5 @@
-# Digital Artist Portfolio Website
+<<<<<<< HEAD
+# my-portfolio
 
 A modern, responsive portfolio website for digital artists built with vanilla HTML, CSS, and JavaScript.
 
@@ -97,3 +98,6 @@ This template is free to use and modify for personal or commercial projects.
 ---
 
 **Built with ❤️ for digital artists**
+=======
+# my-portfolio
+>>>>>>> 99b8e3b58b602e0c55db8072b2d78e8d7a3d11ef
