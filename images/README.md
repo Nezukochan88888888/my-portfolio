@@ -4,7 +4,7 @@ This directory is for storing your portfolio images.
 
 ## Current Setup
 
-The portfolio currently uses placeholder images from [Picsum Photos](https://picsum.photos/) for demonstration purposes.
+The portfolio currently uses placeholder images from [Picsum Photos](https://picsum.photos/id/237/200/300/) for demonstration purposes.
 
 ## Replacing Placeholder Images
 

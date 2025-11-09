@@ -1,383 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
-    <meta name="description" content="Digital Artist Portfolio - Showcasing digital illustrations, concept art, and animations">
-    <!-- iOS PWA support -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <title>Digital Artist Portfolio</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+  <meta name="description"
+    content="Digital Artist Portfolio - Showcasing digital illustrations, concept art, and animations">
+  <!-- iOS PWA support -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Digital Artist Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <!-- ============================================
+  <!-- ============================================
          NAVIGATION BAR
          ============================================ -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <!-- 🎨 EDIT: Replace with your artist name -->
-                <a href="#home">Artist Name</a>
-            </div>
-            
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            
-            <!-- Dark Mode Toggle -->
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                <span class="theme-icon">🌙</span>
-            </button>
-        </div>
-    </nav>
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <!-- 🎨 EDIT: Replace with your artist name -->
+        <a href="#home">Artist Name</a>
+      </div>
 
-    <!-- ============================================
+      <!-- Navigation controls grouped for better mobile layout -->
+      <div class="nav-controls">
+        <!-- Dark Mode Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================
          HERO SECTION
          ============================================ -->
-    <section id="home" class="hero">
-        <!-- Hero background now uses CSS gradient fallback - no external image needed -->
-        <div class="hero-background"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-text fade-in">
-                <!-- 🎨 EDIT: Replace with your name and tagline -->
-                <h1 class="hero-title">Artist Name</h1>
-                <p class="hero-tagline">Digital Illustrator | Concept Artist | Animator</p>
-                <a href="#gallery" class="btn btn-primary" style="display: inline-block;">View My Work</a>
-            </div>
-        </div>
-    </section>
+  <section id="home" class="hero">
+    <!-- Hero background now uses CSS gradient fallback - no external image needed -->
+    <div class="hero-background"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text fade-in">
+        <!-- 🎨 EDIT: Replace with your name and tagline -->
+        <h1 class="hero-title">Artist Name</h1>
+        <p class="hero-tagline">Digital Illustrator | Concept Artist | Animator</p>
+        <a href="#gallery" class="btn btn-primary" style="display: inline-block;">View My Work</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- ============================================
+  <!-- ============================================
          ABOUT SECTION
          ============================================ -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image-wrapper">
-                    <!-- 🖼️ EDIT: Replace with your portrait image URL -->
-                    <!-- Using data URI placeholder - replace with your image URL -->
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='24' font-weight='bold'%3EArtist Portrait%3C/text%3E%3C/svg%3E" alt="Artist Portrait" class="about-image" loading="lazy">
-                </div>
-                <div class="about-text">
-                    <!-- 📝 EDIT: Replace with your bio -->
-                    <p>
-                        Welcome to my digital art portfolio! I'm a passionate digital artist specializing in 
-                        illustrations, concept art, and animation. With over 5 years of experience, I create 
-                        vibrant, imaginative worlds and characters that tell stories and captivate audiences.
-                    </p>
-                    <p>
-                        My work blends traditional art principles with modern digital techniques, resulting in 
-                        pieces that are both visually striking and emotionally resonant. Whether it's fantasy 
-                        landscapes, character designs, or animated sequences, I pour creativity and attention 
-                        to detail into every project.
-                    </p>
-                    
-                    <!-- 🔗 EDIT: Replace with your actual social media links -->
-                    <div class="social-links">
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
-                        <a href="https://artstation.com" target="_blank" rel="noopener noreferrer" aria-label="ArtStation">
-                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M13.633 0L7.33 24h2.069l1.353-3.47 6.895-14.845L13.633 0zm-2.152 15.818l1.544-3.955 1.737 3.955h-3.281z"/>
-                            </svg>
-                        </a>
-                        <a href="https://behance.net" target="_blank" rel="noopener noreferrer" aria-label="Behance">
-                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.925 2.089.543-.825.81-1.952.81-3.241 0-1.199-.363-2.033-.968-2.664-.68-.705-1.848-1.027-3.407-1.027-2.027 0-3.136.85-3.377 2.141h2.258c.115-1.087.995-1.525 1.857-1.525.906 0 1.534.545 1.534 1.451 0 .705-.322 1.162-.715 1.533-.315.302-.679.566-1.187.566h-.854v-1.4h1.542c.878 0 1.434-.078 1.934-.302.545-.249.93-.706.93-1.398 0-1.094-.948-1.898-2.327-1.898-1.444 0-2.498.717-2.746 1.846h-2.19c.345-2.548 2.182-3.935 5.064-3.935 2.943 0 4.985 1.483 4.985 4.123 0 1.712-.621 3.039-1.516 3.791.807.349 1.25.976 1.516 1.823zm-11.135-4.646c-.256-.64-.894-.923-1.558-.923-.889 0-1.669.66-1.669 1.981 0 1.579.892 1.981 1.726 1.981.748 0 1.341-.35 1.501-1.039zm-1.7 0v.02h-.008v-.02h.008z"/>
-                            </svg>
-                        </a>
-                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-image-wrapper">
+          <!-- 🖼️ EDIT: Replace with your portrait image URL -->
+          <!-- Using data URI placeholder - replace with your image URL -->
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='24' font-weight='bold'%3EArtist Portrait%3C/text%3E%3C/svg%3E"
+            alt="Artist Portrait" class="about-image" loading="lazy">
         </div>
-    </section>
+        <div class="about-text">
+          <!-- 📝 EDIT: Replace with your bio -->
+          <p>
+            Welcome to my digital art portfolio! I'm a passionate digital artist specializing in
+            illustrations, concept art, and animation. With over 5 years of experience, I create
+            vibrant, imaginative worlds and characters that tell stories and captivate audiences.
+          </p>
+          <p>
+            My work blends traditional art principles with modern digital techniques, resulting in
+            pieces that are both visually striking and emotionally resonant. Whether it's fantasy
+            landscapes, character designs, or animated sequences, I pour creativity and attention
+            to detail into every project.
+          </p>
 
-    <!-- ============================================
+          <!-- 🔗 EDIT: Replace with your actual social media links -->
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://artstation.com" target="_blank" rel="noopener noreferrer" aria-label="ArtStation">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M13.633 0L7.33 24h2.069l1.353-3.47 6.895-14.845L13.633 0zm-2.152 15.818l1.544-3.955 1.737 3.955h-3.281z" />
+              </svg>
+            </a>
+            <a href="https://behance.net" target="_blank" rel="noopener noreferrer" aria-label="Behance">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.925 2.089.543-.825.81-1.952.81-3.241 0-1.199-.363-2.033-.968-2.664-.68-.705-1.848-1.027-3.407-1.027-2.027 0-3.136.85-3.377 2.141h2.258c.115-1.087.995-1.525 1.857-1.525.906 0 1.534.545 1.534 1.451 0 .705-.322 1.162-.715 1.533-.315.302-.679.566-1.187.566h-.854v-1.4h1.542c.878 0 1.434-.078 1.934-.302.545-.249.93-.706.93-1.398 0-1.094-.948-1.898-2.327-1.898-1.444 0-2.498.717-2.746 1.846h-2.19c.345-2.548 2.182-3.935 5.064-3.935 2.943 0 4.985 1.483 4.985 4.123 0 1.712-.621 3.039-1.516 3.791.807.349 1.25.976 1.516 1.823zm-11.135-4.646c-.256-.64-.894-.923-1.558-.923-.889 0-1.669.66-1.669 1.981 0 1.579.892 1.981 1.726 1.981.748 0 1.341-.35 1.501-1.039zm-1.7 0v.02h-.008v-.02h.008z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
          GALLERY / PORTFOLIO SECTION
          ============================================ -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2 class="section-title">Portfolio</h2>
-            <div class="gallery-grid">
-                <!-- 🖼️ EDIT: Replace gallery items with your artworks -->
-                <!-- Each gallery-item needs: data-title and data-description attributes -->
-                <div class="gallery-item" data-title="Fantasy Landscape" data-description="A mystical forest scene with ethereal lighting and magical creatures.">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EFantasy Landscape%3C/text%3E%3C/svg%3E" alt="Artwork 1" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Fantasy Landscape</h3>
-                    </div>
-                </div>
-                <div class="gallery-item" data-title="Character Design" data-description="Original character concept for a fantasy adventure game.">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3ECharacter Design%3C/text%3E%3C/svg%3E" alt="Artwork 2" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Character Design</h3>
-                    </div>
-                </div>
-                <div class="gallery-item" data-title="Cyberpunk City" data-description="Neon-lit urban landscape set in a dystopian future.">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3ECyberpunk City%3C/text%3E%3C/svg%3E" alt="Artwork 3" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Cyberpunk City</h3>
-                    </div>
-                </div>
-                <div class="gallery-item" data-title="Portrait Study" data-description="Digital painting study focusing on lighting and expression.">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EPortrait Study%3C/text%3E%3C/svg%3E" alt="Artwork 4" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Portrait Study</h3>
-                    </div>
-                </div>
-                <div class="gallery-item" data-title="Concept Art" data-description="Environment concept for an indie game project.">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EConcept Art%3C/text%3E%3C/svg%3E" alt="Artwork 5" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Concept Art</h3>
-                    </div>
-                </div>
-                <div class="gallery-item" data-title="Creature Design" data-description="Mythical creature concept with detailed textures and anatomy.">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3ECreature Design%3C/text%3E%3C/svg%3E" alt="Artwork 6" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Creature Design</h3>
-                    </div>
-                </div>
-                <div class="gallery-item" data-title="Illustration" data-description="Book cover illustration for a fantasy novel series.">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EIllustration%3C/text%3E%3C/svg%3E" alt="Artwork 7" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Illustration</h3>
-                    </div>
-                </div>
-                <div class="gallery-item" data-title="Digital Painting" data-description="Personal artwork exploring color theory and composition.">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EDigital Painting%3C/text%3E%3C/svg%3E" alt="Artwork 8" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Digital Painting</h3>
-                    </div>
-                </div>
-                <div class="gallery-item" data-title="Animation Frame" data-description="Keyframe from an animated short film project.">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EAnimation Frame%3C/text%3E%3C/svg%3E" alt="Artwork 9" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Animation Frame</h3>
-                    </div>
-                </div>
-                <div class="gallery-item" data-title="Sci-Fi Scene" data-description="Space station interior with detailed lighting and atmosphere.">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3ESci-Fi Scene%3C/text%3E%3C/svg%3E" alt="Artwork 10" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Sci-Fi Scene</h3>
-                    </div>
-                </div>
-                <div class="gallery-item" data-title="Fantasy Portrait" data-description="Character portrait with elaborate costume design.">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EFantasy Portrait%3C/text%3E%3C/svg%3E" alt="Artwork 11" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Fantasy Portrait</h3>
-                    </div>
-                </div>
-                <div class="gallery-item" data-title="Environment Art" data-description="Natural landscape with dynamic weather effects.">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EEnvironment Art%3C/text%3E%3C/svg%3E" alt="Artwork 12" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Environment Art</h3>
-                    </div>
-                </div>
-            </div>
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2 class="section-title">Portfolio</h2>
+      <div class="gallery-grid">
+        <!-- 🖼️ EDIT: Replace gallery items with your artworks -->
+        <!-- Each gallery-item needs: data-title and data-description attributes -->
+        <div class="gallery-item" data-title="Fantasy Landscape"
+          data-description="A mystical forest scene with ethereal lighting and magical creatures.">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EFantasy Landscape%3C/text%3E%3C/svg%3E"
+            alt="Artwork 1" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Fantasy Landscape</h3>
+          </div>
         </div>
-    </section>
+        <div class="gallery-item" data-title="Character Design"
+          data-description="Original character concept for a fantasy adventure game.">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3ECharacter Design%3C/text%3E%3C/svg%3E"
+            alt="Artwork 2" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Character Design</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Cyberpunk City"
+          data-description="Neon-lit urban landscape set in a dystopian future.">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3ECyberpunk City%3C/text%3E%3C/svg%3E"
+            alt="Artwork 3" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Cyberpunk City</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Portrait Study"
+          data-description="Digital painting study focusing on lighting and expression.">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EPortrait Study%3C/text%3E%3C/svg%3E"
+            alt="Artwork 4" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Portrait Study</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Concept Art"
+          data-description="Environment concept for an indie game project.">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EConcept Art%3C/text%3E%3C/svg%3E"
+            alt="Artwork 5" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Concept Art</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Creature Design"
+          data-description="Mythical creature concept with detailed textures and anatomy.">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3ECreature Design%3C/text%3E%3C/svg%3E"
+            alt="Artwork 6" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Creature Design</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Illustration"
+          data-description="Book cover illustration for a fantasy novel series.">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EIllustration%3C/text%3E%3C/svg%3E"
+            alt="Artwork 7" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Illustration</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Digital Painting"
+          data-description="Personal artwork exploring color theory and composition.">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EDigital Painting%3C/text%3E%3C/svg%3E"
+            alt="Artwork 8" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Digital Painting</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Animation Frame"
+          data-description="Keyframe from an animated short film project.">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EAnimation Frame%3C/text%3E%3C/svg%3E"
+            alt="Artwork 9" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Animation Frame</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Sci-Fi Scene"
+          data-description="Space station interior with detailed lighting and atmosphere.">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3ESci-Fi Scene%3C/text%3E%3C/svg%3E"
+            alt="Artwork 10" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Sci-Fi Scene</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Fantasy Portrait"
+          data-description="Character portrait with elaborate costume design.">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EFantasy Portrait%3C/text%3E%3C/svg%3E"
+            alt="Artwork 11" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Fantasy Portrait</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Environment Art"
+          data-description="Natural landscape with dynamic weather effects.">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='sans-serif' font-size='32' font-weight='bold'%3EEnvironment Art%3C/text%3E%3C/svg%3E"
+            alt="Artwork 12" loading="lazy">
+          <div class="gallery-overlay">
+            <h3>Environment Art</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- ============================================
+  <!-- ============================================
          LIGHTBOX MODAL
          ============================================ -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
-        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
-        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#8250;</button>
-        <div class="lightbox-content">
-            <img id="lightboxImage" src="" alt="">
-            <div class="lightbox-info">
-                <h3 id="lightboxTitle"></h3>
-                <p id="lightboxDescription"></p>
-            </div>
-        </div>
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="">
+      <div class="lightbox-info">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxDescription"></p>
+      </div>
     </div>
+  </div>
 
-    <!-- ============================================
+  <!-- ============================================
          SERVICES / COMMISSIONS SECTION
          ============================================ -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Services & Commissions</h2>
-            <div class="services-grid">
-                <!-- 💼 EDIT: Replace service cards with your actual offerings and pricing -->
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>Character Design</h3>
-                    <p class="service-description">Original character concepts from concept to final design with multiple revisions.</p>
-                    <p class="service-price">Starting at $150</p>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🖼️</div>
-                    <h3>Illustration</h3>
-                    <p class="service-description">Custom illustrations for books, albums, posters, or personal projects.</p>
-                    <p class="service-price">Starting at $200</p>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌄</div>
-                    <h3>Environment Art</h3>
-                    <p class="service-description">Landscapes, cityscapes, and fantasy environments for games or media.</p>
-                    <p class="service-price">Starting at $250</p>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎬</div>
-                    <h3>Animation</h3>
-                    <p class="service-description">2D animation sequences, character animations, or short animated clips.</p>
-                    <p class="service-price">Starting at $300</p>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                </div>
-            </div>
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title">Services & Commissions</h2>
+      <div class="services-grid">
+        <!-- 💼 EDIT: Replace service cards with your actual offerings and pricing -->
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>Character Design</h3>
+          <p class="service-description">Original character concepts from concept to final design with multiple
+            revisions.</p>
+          <p class="service-price">Starting at $150</p>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
         </div>
-    </section>
+        <div class="service-card">
+          <div class="service-icon">🖼️</div>
+          <h3>Illustration</h3>
+          <p class="service-description">Custom illustrations for books, albums, posters, or personal projects.</p>
+          <p class="service-price">Starting at $200</p>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌄</div>
+          <h3>Environment Art</h3>
+          <p class="service-description">Landscapes, cityscapes, and fantasy environments for games or media.</p>
+          <p class="service-price">Starting at $250</p>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎬</div>
+          <h3>Animation</h3>
+          <p class="service-description">2D animation sequences, character animations, or short animated clips.</p>
+          <p class="service-price">Starting at $300</p>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- ============================================
+  <!-- ============================================
          TESTIMONIALS SECTION
          ============================================ -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Client Testimonials</h2>
-            <div class="testimonials-carousel">
-                <div class="testimonial-slide active">
-                    <div class="testimonial-content">
-                        <p class="testimonial-quote">"Working with this artist was an absolute pleasure. The character design exceeded all expectations and captured the essence of our vision perfectly."</p>
-                        <p class="testimonial-author">— Sarah Johnson, Game Developer</p>
-                    </div>
-                </div>
-                <div class="testimonial-slide">
-                    <div class="testimonial-content">
-                        <p class="testimonial-quote">"The illustrations for our book series were stunning. Each piece told a story and brought our characters to life in ways we never imagined."</p>
-                        <p class="testimonial-author">— Michael Chen, Author</p>
-                    </div>
-                </div>
-                <div class="testimonial-slide">
-                    <div class="testimonial-content">
-                        <p class="testimonial-quote">"Professional, creative, and incredibly talented. The animation work was delivered on time and with exceptional quality. Highly recommended!"</p>
-                        <p class="testimonial-author">— Emma Rodriguez, Film Producer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-controls">
-                <button class="testimonial-btn active" data-slide="0" aria-label="Go to testimonial 1"></button>
-                <button class="testimonial-btn" data-slide="1" aria-label="Go to testimonial 2"></button>
-                <button class="testimonial-btn" data-slide="2" aria-label="Go to testimonial 3"></button>
-            </div>
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2 class="section-title">Client Testimonials</h2>
+      <div class="testimonials-carousel">
+        <div class="testimonial-slide active">
+          <div class="testimonial-content">
+            <p class="testimonial-quote">"Working with this artist was an absolute pleasure. The character design
+              exceeded all expectations and captured the essence of our vision perfectly."</p>
+            <p class="testimonial-author">— Sarah Johnson, Game Developer</p>
+          </div>
         </div>
-    </section>
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <p class="testimonial-quote">"The illustrations for our book series were stunning. Each piece told a story
+              and brought our characters to life in ways we never imagined."</p>
+            <p class="testimonial-author">— Michael Chen, Author</p>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <p class="testimonial-quote">"Professional, creative, and incredibly talented. The animation work was
+              delivered on time and with exceptional quality. Highly recommended!"</p>
+            <p class="testimonial-author">— Emma Rodriguez, Film Producer</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-controls">
+        <button class="testimonial-btn active" data-slide="0" aria-label="Go to testimonial 1"></button>
+        <button class="testimonial-btn" data-slide="1" aria-label="Go to testimonial 2"></button>
+        <button class="testimonial-btn" data-slide="2" aria-label="Go to testimonial 3"></button>
+      </div>
+    </div>
+  </section>
 
-    <!-- ============================================
+  <!-- ============================================
          CONTACT SECTION
          ============================================ -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-form-wrapper">
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required>
-                            <span class="error-message" id="nameError"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                            <span class="error-message" id="emailError"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                            <span class="error-message" id="messageError"></span>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-                <div class="contact-info">
-                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-                    <p>Feel free to reach out through the form or connect with me on social media!</p>
-                    
-                    <!-- 🔗 Social links repeated for easy access -->
-                    <div class="social-links">
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
-                        <a href="https://artstation.com" target="_blank" rel="noopener noreferrer" aria-label="ArtStation">
-                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M13.633 0L7.33 24h2.069l1.353-3.47 6.895-14.845L13.633 0zm-2.152 15.818l1.544-3.955 1.737 3.955h-3.281z"/>
-                            </svg>
-                        </a>
-                        <a href="https://behance.net" target="_blank" rel="noopener noreferrer" aria-label="Behance">
-                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.925 2.089.543-.825.81-1.952.81-3.241 0-1.199-.363-2.033-.968-2.664-.68-.705-1.848-1.027-3.407-1.027-2.027 0-3.136.85-3.377 2.141h2.258c.115-1.087.995-1.525 1.857-1.525.906 0 1.534.545 1.534 1.451 0 .705-.322 1.162-.715 1.533-.315.302-.679.566-1.187.566h-.854v-1.4h1.542c.878 0 1.434-.078 1.934-.302.545-.249.93-.706.93-1.398 0-1.094-.948-1.898-2.327-1.898-1.444 0-2.498.717-2.746 1.846h-2.19c.345-2.548 2.182-3.935 5.064-3.935 2.943 0 4.985 1.483 4.985 4.123 0 1.712-.621 3.039-1.516 3.791.807.349 1.25.976 1.516 1.823zm-11.135-4.646c-.256-.64-.894-.923-1.558-.923-.889 0-1.669.66-1.669 1.981 0 1.579.892 1.981 1.726 1.981.748 0 1.341-.35 1.501-1.039zm-1.7 0v.02h-.008v-.02h.008z"/>
-                            </svg>
-                        </a>
-                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-form-wrapper">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required>
+              <span class="error-message" id="nameError"></span>
             </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+              <span class="error-message" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+              <span class="error-message" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
         </div>
-    </section>
+        <div class="contact-info">
+          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+          <p>Feel free to reach out through the form or connect with me on social media!</p>
 
-    <!-- ============================================
+          <!-- 🔗 Social links repeated for easy access -->
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://artstation.com" target="_blank" rel="noopener noreferrer" aria-label="ArtStation">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M13.633 0L7.33 24h2.069l1.353-3.47 6.895-14.845L13.633 0zm-2.152 15.818l1.544-3.955 1.737 3.955h-3.281z" />
+              </svg>
+            </a>
+            <a href="https://behance.net" target="_blank" rel="noopener noreferrer" aria-label="Behance">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.925 2.089.543-.825.81-1.952.81-3.241 0-1.199-.363-2.033-.968-2.664-.68-.705-1.848-1.027-3.407-1.027-2.027 0-3.136.85-3.377 2.141h2.258c.115-1.087.995-1.525 1.857-1.525.906 0 1.534.545 1.534 1.451 0 .705-.322 1.162-.715 1.533-.315.302-.679.566-1.187.566h-.854v-1.4h1.542c.878 0 1.434-.078 1.934-.302.545-.249.93-.706.93-1.398 0-1.094-.948-1.898-2.327-1.898-1.444 0-2.498.717-2.746 1.846h-2.19c.345-2.548 2.182-3.935 5.064-3.935 2.943 0 4.985 1.483 4.985 4.123 0 1.712-.621 3.039-1.516 3.791.807.349 1.25.976 1.516 1.823zm-11.135-4.646c-.256-.64-.894-.923-1.558-.923-.889 0-1.669.66-1.669 1.981 0 1.579.892 1.981 1.726 1.981.748 0 1.341-.35 1.501-1.039zm-1.7 0v.02h-.008v-.02h.008z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
          FOOTER
          ============================================ -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="currentYear"></span> Artist Name. All rights reserved.</p>
-            <!-- 🎨 EDIT: Replace "Artist Name" in the footer above -->
-        </div>
-    </footer>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="currentYear"></span> Artist Name. All rights reserved.</p>
+      <!-- 🎨 EDIT: Replace "Artist Name" in the footer above -->
+    </div>
+  </footer>
 
-    <!-- ============================================
+  <!-- ============================================
          BACK TO TOP BUTTON
          ============================================ -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 15l-6-6-6 6"/>
-        </svg>
-    </button>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
 
-    <!-- ============================================
+  <!-- ============================================
          🧾 EDITING GUIDE
          ============================================
          
@@ -444,5 +501,5 @@
          
          ============================================ -->
 </body>
-</html>
 
+</html>

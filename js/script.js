@@ -54,11 +54,13 @@ function initializeTheme() {
     const html = document.documentElement;
     
     if (savedTheme === 'dark') {
-        html.setAttribute('data-theme', 'dark');
-        themeToggle.querySelector('.theme-icon').textContent = '☀️';
+        html.setAttribute('data-theme', 'dark'); 
+        if (themeToggle.querySelector('.theme-icon')) themeToggle.querySelector('.theme-icon').textContent = '☀️';
+        else themeToggle.textContent = '☀️';
     } else {
         html.setAttribute('data-theme', 'light');
-        themeToggle.querySelector('.theme-icon').textContent = '🌙';
+        if (themeToggle.querySelector('.theme-icon')) themeToggle.querySelector('.theme-icon').textContent = '🌙';
+        else themeToggle.textContent = '🌙';
     }
     
     // Toggle theme on button click
@@ -69,9 +71,9 @@ function initializeTheme() {
         html.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         
-        // Update icon
-        themeToggle.querySelector('.theme-icon').textContent = 
-            newTheme === 'dark' ? '☀️' : '🌙';
+        // Update icon - works with or without a span
+        const iconHolder = themeToggle.querySelector('.theme-icon') || themeToggle;
+        iconHolder.textContent = newTheme === 'dark' ? '☀️' : '🌙';
     });
 }
 
@@ -607,4 +609,3 @@ function initializeImageErrorHandling() {
         }
     });
 }
-
