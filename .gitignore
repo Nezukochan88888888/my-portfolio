@@ -1,2 +1,15 @@
-# Environment variables
+# Ignore local environment files
 .env
+/backend/.env
+
+# Node deps for backend
+/backend/node_modules/
+
+# Flutter build / typical ignores (if not already present)
+build/
+.dart_tool/
+.packages
+.pub-cache/
+.idea/
+.vscode/
+*.iml

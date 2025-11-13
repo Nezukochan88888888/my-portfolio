@@ -35,6 +35,79 @@ const testimonialSlides = document.querySelectorAll('.testimonial-slide');
 const testimonialButtons = document.querySelectorAll('.testimonial-btn');
 
 // ============================================
+// IMAGE LOADING
+// ============================================
+async function loadImages() {
+    try {
+        const response = await fetch('assets/config/images.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const images = await response.json();
+        
+        // Process URLs to point to the backend
+        const backendUrl = 'http://localhost:3000/image';
+        const processedImages = {
+            heroBanner: `${backendUrl}/${getPublicId(images.heroBanner)}`,
+            profilePhoto: `${backendUrl}/${getPublicId(images.profilePhoto)}`,
+            background: `${backendUrl}/${getPublicId(images.background)}`,
+            gallery: images.gallery.map(url => `${backendUrl}/${getPublicId(url)}`)
+        };
+        
+        updateDomWithImages(processedImages);
+        
+    } catch (error) {
+        console.error('Error loading images:', error);
+    }
+}
+
+function getPublicId(url) {
+    try {
+        const urlObject = new URL(url);
+        // Pathname is like /dwjnur7rd/image/upload/v1762570683/artwork-2_v6bzgl.jpg
+        const pathSegments = urlObject.pathname.split('/');
+        // Find 'upload' and get the following segments
+        const uploadIndex = pathSegments.indexOf('upload');
+        if (uploadIndex === -1 || uploadIndex + 1 >= pathSegments.length) {
+            return ''; // Or handle error appropriately
+        }
+        // Remove version number (e.g., v12345678)
+        const publicIdPath = pathSegments.slice(uploadIndex + 1).join('/');
+        const withoutVersion = publicIdPath.replace(/v\d+\//, '');
+        // Remove file extension
+        const publicId = withoutVersion.substring(0, withoutVersion.lastIndexOf('.'));
+        return publicId;
+    } catch (e) {
+        console.error('Invalid image URL:', url);
+        return '';
+    }
+}
+
+function updateDomWithImages(images) {
+    // Update About section image
+    const aboutImage = document.querySelector('.about-image');
+    if (aboutImage && images.profilePhoto) {
+        aboutImage.src = images.profilePhoto;
+    }
+    
+    // Update Gallery images
+    const galleryGrid = document.querySelector('.gallery-grid');
+    const galleryItems = galleryGrid.querySelectorAll('.gallery-item');
+    
+    if (galleryGrid && images.gallery) {
+        images.gallery.forEach((imgSrc, index) => {
+            if (galleryItems[index]) {
+                const img = galleryItems[index].querySelector('img');
+                if (img) {
+                    img.src = imgSrc;
+                }
+            }
+        });
+    }
+}
+
+
+// ============================================
 // INITIALIZATION
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -43,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeScrollAnimations();
     initializeLazyLoading();
     initializeImageErrorHandling();
+    loadImages();
 });
 
 // ============================================
